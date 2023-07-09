@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peer chat</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div id="videos">
+    <video id="user-1" class="video-player" autoplay playsinline></video>
+    <video id="user-2" class="video-player" autoplay playsinline ></video>
+    </div>
+    <div id="controls">
+        <div class="controlsContainer" id="cameraBtn">
+            <img src="icons/camera.png">
+        </div>
+        <div class="controlsContainer" id="micBtn">
+            <img src="icons/mic.png">
+        </div>
+        <a href="lobby.html">    
+            <div class="controlsContainer" id="phoneBtn">
+                <img src="icons/phone.png">
+            </div>
+        </a>
+         
+    </div>
+</body>
+<script src="agora-rtm-sdk-1.4.4.js"></script>
+<script src="main.js"></script>
+</html>

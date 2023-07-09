@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peer Chat</title>
+    <link rel="stylesheet" href="lobby.css">
+</head>
+<body>
+    <h2>Video Calling app</h2>
+    <form id="joinForm">
+        <h3>👋 Join room</h3>
+        <input type="text" id="txt" name="inviteLink" placeholder="Enter room name" required>
+        <input type="text" id="password" name="passwordLink" placeholder="Enter password" required>
+        <input type="submit" value="Join Room">
+    </form>
+
+</body>
+<script>
+    let form = document.getElementById("joinForm");
+    form.addEventListener("submit",(e)=>{
+       e.preventDefault();
+       let invitecode = e.target.inviteLink.value;
+       let passwordCode = e.target.passwordLink.value;
+       window.location = `index.html?room=${invitecode}&password=${passwordCode}`;
+    })
+    document.getElementById('txt').addEventListener("focus",()=>{
+       document.getElementById("joinForm").style.boxShadow = '0px 0px 22px 1px cyan'
+       document.getElementById("joinForm").style.border = '1px solid white'
+    })
+    document.getElementById('txt').addEventListener("blur",()=>{
+       document.getElementById("joinForm").style.boxShadow = '0px 0px 0px 0px'
+       document.getElementById("joinForm").style.border = '4px solid white'
+    })
+</script>
+</html>
